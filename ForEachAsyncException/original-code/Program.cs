@@ -5,9 +5,11 @@
 
     static async Task Main(string[] args)
     {
+        Console.Clear();
         try
         {
-            await Parallel.ForEachAsync(Enumerable.Range(1, 100),
+            await Parallel.ForEachAsync(
+                Enumerable.Range(1, 100),
                 new ParallelOptions() { MaxDegreeOfParallelism = 10 },
                 async (i, _) =>
                 {
@@ -16,7 +18,6 @@
                     MightThrowException(i);
                     Interlocked.Increment(ref TotalProcessed);
                 });
-
         }
         catch (Exception ex)
         {

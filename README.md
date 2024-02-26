@@ -1,10 +1,12 @@
 # Parallel.ForEachAsync Exceptions  
 
-Exploring exception handling with Parallel.ForEachAsync in C#. Parallel.ForEachAsync is a great tool since it lets us easily run code in parallel (and the earlier Parallel.ForEach did not work well with asynchronous code). One question that comes up with how to deal with exceptions that happen inside the ForEachAsync loop. There are a couple of issues with this.  
+Parallel.ForEachAsync is a very useful tool for running code in parallel. But what happens when an exception is thrown inside the loop?  
 
-1. If we "await" ForEachAsync, then we will get a single exception back (even if exceptions were thrown in multiple iterations of the loop). This is the nature of how "await" deals with exceptions.  
+By default, the following things happen:
 
-2. If an exception is thrown inside a ForEachAsync loop, the loop short-circuits. This means that not all items will be processed.  
+1. If we "await" ForEachAsync, then we get a single exception (even if exceptions are thrown in multiple iterations of the loop).  
+
+2. The loop short-circuits -- meaning not all items are processed.  
 
 This code explores both of these issues in a couple of different ways.  
 
@@ -12,7 +14,9 @@ This code explores both of these issues in a couple of different ways.
 
 ## Articles
 
-*Articles coming soon*
+* [Parallel.ForEachAsync and Exceptions](https://jeremybytes.blogspot.com/2024/02/parallelforeachasync-and-exceptions.html)  
+* Getting Multiple Exceptions from Parallel.ForEachAsync *coming soon!*  
+* Continue Processing with Parallel.ForEachAsync (even when exceptions are thrown) *coming soon!*  
 
 ## Projects
 
