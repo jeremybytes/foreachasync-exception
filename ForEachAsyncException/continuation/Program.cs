@@ -7,6 +7,8 @@ class Program
 
     static async Task Main(string[] args)
     {
+        Console.Clear();
+
         try
         {
             await Parallel.ForEachAsync(Enumerable.Range(1, 100),
@@ -20,9 +22,9 @@ class Program
                 })
                 .ContinueWith(task =>
                 {
-                    ShowAggregateException(task.Exception!);
-                },
-                TaskContinuationOptions.OnlyOnFaulted);
+                    if (task.IsFaulted)
+                        ShowAggregateException(task.Exception);
+                });
         }
         catch (Exception)
         {

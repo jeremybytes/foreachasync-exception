@@ -12,6 +12,8 @@ class Program
 
     static async Task Main(string[] args)
     {
+        Console.Clear();
+
         try
         {
             await Parallel.ForEachAsync(Enumerable.Range(1, 100),
