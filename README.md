@@ -15,7 +15,7 @@ This code explores both of these issues in a couple of different ways.
 ## Articles
 
 * [Parallel.ForEachAsync and Exceptions](https://jeremybytes.blogspot.com/2024/02/parallelforeachasync-and-exceptions.html)  
-* Getting Multiple Exceptions from Parallel.ForEachAsync *coming soon!*  
+* [Getting Multiple Exceptions from Parallel.ForEachAsync](https://jeremybytes.blogspot.com/2024/02/getting-multiple-exceptions-from.html)  
 * Continue Processing with Parallel.ForEachAsync (even when exceptions are thrown) *coming soon!*  
 
 ## Projects
