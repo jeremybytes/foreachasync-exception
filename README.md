@@ -16,7 +16,7 @@ This code explores both of these issues in a couple of different ways.
 
 * [Parallel.ForEachAsync and Exceptions](https://jeremybytes.blogspot.com/2024/02/parallelforeachasync-and-exceptions.html)  
 * [Getting Multiple Exceptions from Parallel.ForEachAsync](https://jeremybytes.blogspot.com/2024/02/getting-multiple-exceptions-from.html)  
-* Continue Processing with Parallel.ForEachAsync (even when exceptions are thrown) *coming soon!*  
+* [Continue Processing with Parallel.ForEachAsync (even when exceptions are thrown)](https://jeremybytes.blogspot.com/2024/02/continue-processing-with.html)  
 
 ## Projects
 
@@ -39,9 +39,5 @@ This solves for issue #1 (it shows the inner exceptions), but it does **not** re
 [doesnt-stop/Program.cs](./ForEachAsyncException/doesnt-stop/Program.cs)  
 This code catches exceptions **inside** the ForEachAsync loop.  
 This solves for both issues: (1) it shows all of the exceptions, (2) it processes all of the items without short-circuiting.
-
----
-## More to Come
-This is an initial write-up and work in progress. A full article is in the works.
 
 ---
